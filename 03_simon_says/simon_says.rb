@@ -14,3 +14,28 @@ def repeat(word, num =2)
 new_word
 end
 
+def start_of_word(word, num)
+  word[0..num-1]
+end
+
+def first_word(sentence)
+  split_sentence = sentence.split(" ")
+  split_sentence[0]
+end
+
+def titleize(word)
+ split_words =word.split(" ")
+ split_words.each do |x|
+  if x == "and" || x== "the" || x== "over"
+    next
+  else
+    x.capitalize!
+  end
+  split_words[0].capitalize!
+end
+
+split_words.join(" ")
+end
+
+
+
